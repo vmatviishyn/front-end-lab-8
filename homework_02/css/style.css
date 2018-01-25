@@ -84,8 +84,8 @@ write your code here
 	
 	/*	Task 8	*/
 	.tm-main-content > section:not(:first-child) p {
-		text-indent: 20px!important;
-		line-height: 30px!important;
+		text-indent: 20px;
+		line-height: 30px;
 	}
 	
 	/*	Task 9	*/
@@ -104,7 +104,7 @@ write your code here
 	.heading a:visited{	color: silver;	}
 	
 	/*	Task 10	*/
-	.gallery-container p::first-letter{	color: #000;	}
+	.gallery-container p::first-letter{	color: #000!important;	}
 	.gallery-container p{
 		text-indent: 0!important;
 		font-size: 18px;
