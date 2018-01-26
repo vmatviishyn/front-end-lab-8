@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: rgba(198, 238, 252, 0.53);
+  color: #ffffff; }
+  body #content {
+    background-color: #3b3b3b;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 10px 20px; }
+    body #content h1 {
+      text-align: center;
+      color: #fccd10;
+      padding: 10px 0;
+      text-transform: uppercase; }
+    body #content h2 {
+      color: #fccd10;
+      padding: 20px 0; }
+    body #content p {
+      margin-bottom: 10px; }
+    body #content .img-left {
+      float: left;
+      padding: 2px;
+      margin-right: 20px;
+      margin-bottom: 10px;
+      border: 2px solid #fccd10; }
+    body #content .brief {
+      float: left;
+      background-color: #fff178;
+      width: 960px;
+      padding: 20px;
+      margin-bottom: 30px;
+      color: #000000; }
+    body #content .img-right {
+      float: right;
+      padding: 2px;
+      margin-left: 20px;
+      margin-bottom: 10px;
+      border: 2px solid #fccd10; }
+    body #content a {
+      color: #f5c70f; }
+    body #content table {
+      width: 900px;
+      margin-bottom: 30px;
+      border-collapse: collapse; }
+      body #content table caption {
+        text-align: right; }
+      body #content table tr {
+        height: 35px;
+        background-color: #677d01; }
+        body #content table tr th {
+          background-color: #94a34e;
+          text-transform: uppercase;
+          font-weight: normal;
+          text-align: left;
+          padding-left: 20px;
+          color: #ffffff; }
+          body #content table tr th:nth-child(2) {
+            border-left: 1px solid #3b3b3b;
+            border-right: 1px solid #3b3b3b; }
+        body #content table tr td {
+          padding-left: 20px;
+          border-bottom: 1px solid #94a34e; }
+    body #content .contact-form label {
+      color: #f5c70f; }
+    body #content .contact-form .form-group {
+      float: left; }
+      body #content .contact-form .form-group .input {
+        height: 25px;
+        width: 475px;
+        margin-right: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border: 1px solid #94a34e;
+        padding-left: 10px; }
+      body #content .contact-form .form-group #contact_email, body #content .contact-form .form-group #contact_rating {
+        height: 25px;
+        width: 955px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        border: 1px solid #94a34e;
+        padding-left: 10px; }
+      body #content .contact-form .form-group #contact_message {
+        width: 955px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        border: 1px solid #94a34e;
+        resize: vertical;
+        padding-left: 10px; }
+    body #content .contact-form #send-btn {
+      font-size: 20px;
+      font-weight: normal;
+      height: 45px;
+      width: 250px;
+      color: #f5c70f;
+      background-color: #3b3b3b;
+      border: 1px solid #f5c70f; }
+      body #content .contact-form #send-btn:hover {
+        cursor: pointer;
+        background-color: #555555;
+        box-shadow: 5px 5px 10px rgba(198, 238, 252, 0.53); }

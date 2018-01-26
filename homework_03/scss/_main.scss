@@ -1,0 +1,183 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin brief() {
+    //style 1
+    @if $backgroundColor == #dcbb9a {
+        .brief{
+            float: left;
+            background-color: $briefColor;
+            width: 420px;
+            padding: 20px;
+            margin-right: 10px;
+        }
+    }
+    //style 2
+    @else if $backgroundColor == rgba(198, 238, 252, 0.53) {
+        .brief{
+            float: left;
+            background-color: $briefColor;
+            width: 960px;
+            padding: 20px;
+            margin-bottom: 30px;
+            color: #000000;
+        }
+    }
+}
+
+@mixin headings(){
+    @if $backgroundColor == #dcbb9a {
+        h1{
+            text-align: center;
+            color: $mainColor;
+            padding: 10px 0; 
+        }
+    }
+    //style 2
+    @else if $backgroundColor == rgba(198, 238, 252, 0.53) {
+        h1{
+            text-align: center;
+            color: $mainColor;
+            padding: 10px 0; 
+            text-transform: uppercase;
+        }
+    }
+}
+
+body{
+    background-color: $backgroundColor;
+    color: $fontColor;
+
+    #content{
+        background-color: $contentColor;
+        width: 1000px;
+        margin: 0 auto;
+        margin-top: 15px;
+        padding: 10px 20px;
+
+        @include headings();
+
+        h2{
+            color: $mainColor;
+            padding: 20px 0;
+        }
+
+        p{
+            margin-bottom: 10px;
+        }
+
+        .img-left{
+            float: left;
+            padding: 2px;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            border: 2px solid $mainColor;
+        }
+
+        @include brief();
+
+        .img-right{
+            float: right;
+            padding: 2px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            border: 2px solid $mainColor;
+        }
+
+        a{
+            color: $linkColor;
+        }
+
+        table{
+            width: 900px;
+            margin-bottom: 30px;
+            border-collapse:collapse;
+            
+            caption{
+                text-align: right;
+            }
+            tr{
+
+                height: 35px;
+                background-color: $tableBack;
+
+                th{
+                    background-color: $tableHeadBack;                    
+                    text-transform: uppercase;
+                    font-weight: normal;
+                    text-align: left;
+                    padding-left: 20px;
+                    color: $fontColor;
+
+
+                    &:nth-child(2){
+                        border-left: 1px solid $contentColor;
+                        border-right: 1px solid $contentColor;
+                    }
+                }
+                td{
+                    
+                    padding-left: 20px;
+                    border-bottom: 1px solid $tableHeadBack;
+                }
+            }
+        }
+
+        .contact-form{
+
+            label{
+                color: $labelColor;
+            }
+            .form-group{
+                float: left;
+
+                .input{
+                    height: 25px;
+                    width: 475px;
+                    margin-right: 5px;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    border: 1px solid $tableHeadBack;
+                    padding-left: 10px;
+                }
+                #contact_email, #contact_rating{
+                    height: 25px;
+                    width: 955px;
+                    margin-bottom: 5px;
+                    margin-top: 5px;
+                    border: 1px solid $tableHeadBack;
+                    padding-left: 10px;
+                }
+                #contact_message{
+                    width: 955px;
+                    margin-bottom: 5px;
+                    margin-top: 5px;
+                    border: 1px solid $tableHeadBack;
+                    resize: vertical; 
+                    padding-left: 10px;
+                }      
+            }
+
+            #send-btn{
+                font-size: 20px;
+                font-weight: normal;
+                height: 45px;
+                width: 250px;
+                color: $linkColor;
+                background-color: $contentColor;
+                border: 1px solid $linkColor;
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: lighten($contentColor, 10%);
+                    box-shadow: 5px 5px 10px $backgroundColor;
+                }
+            }
+
+        }
+  
+    }
+}
