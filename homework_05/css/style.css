@@ -82,12 +82,17 @@ body{
 	padding: 8px;
 	width: 29%;
 	background: #CCC;
-	color: #333;
 	margin-top: 25px;
 	margin-right: 10px;
-	transition: all 0.3s ease;
-	
 }
+
+.gallery-item a{
+	color: #333;
+	transition: all 0.3s ease;
+	text-decoration: none;
+}
+
+
 .gallery-item:hover{
 	background: #39c2d7;
 }
@@ -128,10 +133,6 @@ footer{
 }
 
 .foo-item a:hover{
-	text-decoration: none;
-}
-
-.foo-item:nth-child(2) a{
 	text-decoration: none;
 }
 
