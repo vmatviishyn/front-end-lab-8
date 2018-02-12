@@ -1,5 +1,5 @@
 var result, userNumber, randomNumber, againResult, contResult, againContResult, attempt, currentPrize, totalPrize;
-var min=0; max=5;
+var min=0; max=5, prize=0;
 // var d =  ^ 0;
 result = confirm("Do you want to play a game?");
 
@@ -7,6 +7,7 @@ randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
 if(!result){
     console.log("You did not become a millionaire.");
 } else {
+	prize = 10;
     currentPrize = 10;
     totalPrize=0;
     attempt=3;
@@ -46,7 +47,8 @@ if(!result){
                 } else {
                     attempt = 3;
                     max = max*2;
-                    currentPrize = currentPrize*3;
+                    prize = prize * 3;
+                    currentPrize = prize;
                     randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
                 } 
             } else if (randomNumber!=userNumber) {
