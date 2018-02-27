@@ -1,0 +1,17 @@
+ul{
+    list-style-type: none;
+}
+.material-icons{
+    color: #EDBC0B;
+    vertical-align: -5px;
+    padding-right: 5px;
+}
+.file{
+    color: #BBBBBB;
+}
+ul li ul {
+    display: none;
+}
+.folder_open{
+    display: block;
+} 
