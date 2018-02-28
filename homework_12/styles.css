@@ -1,0 +1,135 @@
+/* Your styles goes here */
+body{
+    background-color: #1C1C1E;
+    color: #A19E86;
+    font-family: serif;
+}
+.models{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.models__item{
+    max-width: 300px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+}
+.models a{
+    text-decoration: none;
+}
+.models__item p span{
+    color: #A19E86;
+}
+.models__item:hover{
+    background-color: #2C2C2C;
+    cursor: pointer;
+}
+.models__item .tooltiptext{
+    visibility: hidden;
+    width: 120px;
+    color: #A19E86;
+    text-align: center;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+.models__item:hover .tooltiptext {
+    visibility: visible;
+}
+.models__item img{
+    max-width: 300px;
+    margin-right: 5px;
+}
+.models__item p{
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+}
+#model__title{
+    color: #D7D1B7;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 230px;
+    display: inline-block;
+    vertical-align: -7px;
+}
+.tooltiptext{
+    visibility: hidden;
+}
+/* ============================================================ */
+
+.header{
+    display: flex;
+    align-items: center;
+}
+.header h1{
+    text-transform: uppercase;
+    margin-left: 5px;
+}
+.header h1 span{
+    text-transform: none;
+    margin-left: 5px;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    color: #A19E86;
+    top: 25px;
+    left: 10px;
+    position: absolute;
+    z-index: 1;
+    font-size: 18px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.model__img{
+    float: left;
+}
+.model__table{
+    float: left;
+}
+.back{
+    content: ""; 
+    clear: both; 
+    display: block; 
+    cursor: pointer;
+    text-decoration: none;
+    color: #A19E86;
+}
+
+.back:hover{
+    color: rgb(219, 210, 144);
+}
+table {
+    border-collapse: collapse;
+}
+table, td {
+    border: 1px solid #A19E86;
+}
+td:first-child{
+    padding: 5px 500px 5px 5px;
+}
+td:last-child{
+    padding: 5px 200px 5px 5px;
+}
+
+
+
+
+
+
+
+
+
+
