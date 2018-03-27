@@ -1,46 +1,66 @@
 var hunter = new Champion({ name: "Rexxar", attack: 10, hitpoints: 60 });
 var beast = new Monster({ name: "King Krush", attack: 8, hitpoints: 80 });
 
-function fight(champion, monster) {
+function fight(fighter1, fighter2) {
     while (true) {
         var random = Math.random() >= 0.5;
         var newrandom = Math.random() >= 0.5;
         if (random) {
-            if (monster.isAlive()) {
-                console.log(champion.name + " is attacking " + monster.name);
-                champion.fight(monster);
-                if (newrandom) {
-                    console.log(`${champion.name} is healing.`);
-                    champion.heal();
+            if (fighter2.isAlive()) {
+                console.log(fighter1.name + " is attacking " + fighter2.name);
+                fighter1.fight(fighter2);
+                if (fighter1 instanceof Champion) {
+                    if (newrandom) {
+                        console.log(`${fighter1.name} is healing.`);
+                        fighter1.heal();
+                    } else {
+                        console.log(`${fighter1.name} is defencing.`);
+                        fighter1.defence();
+                    }
                 } else {
-                    console.log(`${champion.name} is defencing.`);
-                    champion.defence();
+                    if (newrandom) {
+                        console.log(`${fighter1.name} is enarging.`);
+                        fighter1.enrage();
+                    } else {
+                        console.log(`${fighter1.name} is fury.`);
+                        fighter1.fury();
+                    }
                 }
-                console.log(monster.name + " HP = " + monster.getHitpoints());
+                console.log(fighter2.name + " HP = " + fighter2.getHitpoints());
             } else {
-                console.log(`${champion.name} wins this fight.\n
-                ${champion.name} hitpoint ${champion.getHitpoints()}\n
-                ${champion.name} total hitpoint ${champion.getTotalHitpoints()}\n
-                ${champion.name} attack ${champion.getAttack()}`);
+                console.log(`${fighter1.name} wins this fight.
+                ${fighter1.name} hitpoint ${fighter1.getHitpoints()}
+                ${fighter1.name} total hitpoint ${fighter1.getTotalHitpoints()}
+                ${fighter1.name} attack ${fighter1.getAttack()}`);
                 break;
             }
         } else {
-            if (champion.isAlive()) {
-                console.log(monster.name + " is attacking " + champion.name);
-                monster.fight(champion);
-                if (newrandom) {
-                    console.log(`${monster.name} is enarging.`);
-                    monster.enrage();
+            if (fighter1.isAlive()) {
+                console.log(fighter2.name + " is attacking " + fighter1.name);
+                fighter2.fight(fighter1);
+                if (fighter2 instanceof Monster) {
+                    if (newrandom) {
+                        console.log(`${fighter2.name} is enarging.`);
+                        fighter2.enrage();
+                    } else {
+                        console.log(`${fighter2.name} is fury.`);
+                        fighter2.fury();
+                    }
                 } else {
-                    console.log(`${champion.name} is fury.`);
-                    monster.fury();
+                    if (newrandom) {
+                        console.log(`${fighter2.name} is healing.`);
+                        fighter2.heal();
+                    } else {
+                        console.log(`${fighter2.name} is defencing.`);
+                        fighter2.defence();
+                    }
                 }
-                console.log(champion.name + " HP = " + champion.getHitpoints());
+                console.log(fighter1.name + " HP = " + fighter1.getHitpoints());
             } else {
-                console.log(`${monster.name} wins this fight.\n
-                ${monster.name} hitpoint ${monster.getHitpoints()}\n
-                ${monster.name} total hitpoint ${monster.getTotalHitpoints()}\n
-                ${monster.name} attack ${monster.getAttack()}`);
+                console.log(`${fighter2.name} wins this fight.
+                ${fighter2.name} hitpoint ${fighter2.getHitpoints()}
+                ${fighter2.name} total hitpoint ${fighter2.getTotalHitpoints()}
+                ${fighter2.name} attack ${fighter2.getAttack()}`);
                 break;
             }
         }
