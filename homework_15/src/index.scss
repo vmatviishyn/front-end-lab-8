@@ -1,0 +1,9 @@
+// General
+@import './styles/fonts';
+@import './styles/colors';
+
+/* Import your components styles here */
+@import './features/Components/ColorsList/Color/Color';
+@import './features/Components/ColorsList/MinColor/MinColor';
+@import './features/Components/ColorsList/ColorsList';
+@import './features/Components/SearchBar/SearchBar';
