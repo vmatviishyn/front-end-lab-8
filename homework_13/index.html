@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="/lib/angular.min.js"></script>
+    <script src="/src/app.js"></script>
+    <script src="/src/data.js"></script>
+</head>
+<body ng-controller="DemoController as demo">
+    <div class="posts">
+        <div class="post" ng-repeat="post in demo.studentsList  | filter : {title: test}">
+            <div class="post-photo">
+                <img ng-src="{{post.photo}}" alt="photo">
+                <h1>{{post.title}}</h1>
+                <input class="post-title-edit" type="text" ng-model="post.title" ng-show="demo.showInput">
+            </div>
+            <ul class="categories" >
+                <li ng-repeat="categorie in post.categories | filter:filters" ><a href="#">{{categorie}}</a></li>
+            </ul>
+            <p class="post-text">{{post.description}}</p>
+            <textarea class="post-text-edit" type="text" ng-model="post.description"  ng-show="demo.showInput"></textarea>
+            <p class="post-editBtn"><a ng-click="demo.toggle()">{{demo.buttonName}}</a></p> 
+        </div>
+    
+        <button ng-hide="demo.showForm" ng-click="demo.showForm = true">Add new post</button>
+        <form class="addPostForm" ng-show="demo.showForm" ng-submit="demo.submitForm()">
+            <span>Title</span><br>
+            <input class="addPostFrom-inputs" type="text" name="title" ng-model="demo.post.title" required/><br>
+            <span>Description</span><br>
+            <textarea class="addPostFrom-inputs" type="text" name="description" ng-model="demo.post.description" required></textarea><br>
+            <span>Categories</span><br>
+            <input class="addPostFrom-inputs" type="text" name="categries" ng-model="demo.cat" placeholder="Split by space" required/><br>
+            <span>Photo</span><br>
+            <input class="addPostFrom-inputs" type="text" name="photo" ng-model="demo.photoname" placeholder="photo_name.jpg">
+            <br>
+            <input class="submit" type="submit" value="Add" />
+
+        </form>
+    </div>
+    <div class="sidebar">
+        <p>Search by title: </p>
+        <input type="text" ng-model="test">
+
+        <p>Categories:</p>
+        <ul class="sidebar-categories">
+            <li><a ng-click="filters.categories = ''">All</a></li>
+            <li ng-repeat="categorie in demo.uniq"><a ng-click="filters.categories = categorie">{{categorie}}</a></li>
+        </ul>
+    </div>
+  </body>
+</html>

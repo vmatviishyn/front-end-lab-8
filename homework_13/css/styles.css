@@ -1,0 +1,135 @@
+body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.posts{
+    width: 60%;
+}
+
+.categories{
+    display: inline-block;
+    margin-left: -40px;
+}
+
+.categories li{
+    display:inline;
+    margin-right: 10px;
+}
+
+.categories li a{
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+.sidebar{
+    width: 20%;
+    border: 1px solid black;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+.post{
+    height: auto;
+    background-color: rgb(199, 199, 199);
+    padding: 10px;
+    margin: 15px 0;
+    position: relative;
+}
+
+
+
+.post-photo{
+    /* position: relative;
+    width: 100%; */
+    position: relative;
+    text-align: center;
+    color: white;
+    text-align: center;
+}
+
+.post-photo img{
+    width: 100%;
+}
+
+
+
+
+/* .post-photo h1 span{
+    display: inline-block;
+    width: 50%;
+    color: white;
+	font: bold 24px/45px Helvetica, Sans-Serif;
+	letter-spacing: -1px;
+	background: rgba(128, 128, 128, 0.5);
+    padding: 6px 20px;
+    text-transform: uppercase;
+} */
+
+.post-text{
+    text-align: justify;
+    margin-top: -5px;
+}
+
+.post-editBtn{
+    text-align: right;
+    margin-right: 5px;
+}
+
+.post-editBtn a{
+    color: blue;
+    cursor: pointer;
+}
+
+.post-photo h1{
+    position: absolute;
+    bottom: -12px;
+    font: bold 24px/45px Helvetica, Sans-Serif;
+	letter-spacing: -1px;
+    width: 100%;   
+    background: rgba(128, 128, 128, 0.5);
+    /* padding: 6px 20px; */
+    text-transform: uppercase;
+}
+
+.post-title-edit{
+    bottom: 13px;
+    left: 20%;
+    height: 10%;
+    width: 55%;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;   
+    position: absolute;
+}
+
+.post-text-edit{
+    position: absolute;
+    width: 96%;
+    height: 19%;
+    bottom: 11%;
+}
+
+.addPostForm{
+    width: 100%;
+    background-color: rgb(199, 199, 199);
+    padding: 20px 0;
+}
+
+.addPostForm span{
+    margin: 20px;
+}
+
+.addPostFrom-inputs{
+    margin: 5px 20px;
+    width: 50%;
+}
+
+.submit{
+    margin: 20px;
+    width: 100px;
+}
