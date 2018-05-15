@@ -1,0 +1,42 @@
+<table>
+  <thead>
+    <th>#</th>
+    <th>Topic</th>
+    <th>Date</th>
+    <th>Lecturer</th>
+    <th>Actions</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="AddNew">Add new: </td>
+      <td class="AddNew"><input class="inputs" type="text" #topic [value]="topicValue"></td>
+      <td class="AddNew"><input class="inputs" type="text" #date [value]="dateValue"></td>
+      <td class="AddNew"><input class="inputs" type="text" #lecturer [value]="lecturerValue"></td>
+      <td class="AddNew"><input class="inputs" type="button" value="Add" (click)="addContact(topic.value, date.value, lecturer.value);topicValue='';dateValue='';lecturerValue='';"></td>
+    </tr>
+    <tr *ngFor="let class of TableData">
+      <td>{{class.id}}</td>
+      <td *ngIf="show"><input class="inputs" type="text" [(ngModel)]="class.topic"></td>
+      <td *ngIf="hide">{{class.topic}}</td>
+
+      <td *ngIf="show"><input class="inputs" type="text" [(ngModel)]="class.date"></td>
+      <td *ngIf="hide">{{class.date}}</td>
+
+      <td *ngIf="show"><input class="inputs" type="text" [(ngModel)]="class.lecturer"></td>
+      <td *ngIf="hide">{{class.lecturer}}</td>
+
+      <td >
+        <div class="buttons">
+            <button type="button"  (click)="toggle()">{{buttonName}}</button>
+            <input *ngIf="hide" type="button" value="Delete" (click)="removeContact(class)">
+            <input *ngIf="show" type="button" value="Discard"  (click)="toggle()">
+        </div>
+
+      </td>
+    </tr>
+  </tbody>
+
+</table>
+  
+        
+        
